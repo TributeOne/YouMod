@@ -115,7 +115,8 @@ concurrency:
 jobs:
   build:
     name: Build IPA with tweaks
-    runs-on: macos-latest
+    # Validation only: run on my own Mac so the decrypted IPA never has to be uploaded.
+    runs-on: [self-hosted, macOS]
     permissions:
       contents: write
 
